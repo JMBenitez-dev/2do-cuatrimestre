@@ -1,3 +1,5 @@
+//ejercicio con lucas
+
 //console.log("hola desde node");
 
 let readlineSync = require('readline-sync');
