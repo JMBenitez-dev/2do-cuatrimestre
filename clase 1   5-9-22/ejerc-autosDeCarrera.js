@@ -2,7 +2,7 @@ let readlineSync = require ('readline-sync');
 // for ingreso de tiempo de vueltas
 let vueltas = [];
 for (let i=1; i<5; i++){
-    vueltas[i] = readlineSync.questionInt ("el tiempo de la vuelta N " + [i]  + " es: ");
+    vueltas[i] = readlineSync.questionInt ("Ingresar el tiempo de la vuelta N " + [i]  + " en minutos: ");
 };
 
 //suma las vueltas con el metodo reduce
