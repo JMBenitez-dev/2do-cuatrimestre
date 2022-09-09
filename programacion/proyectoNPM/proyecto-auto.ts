@@ -2,18 +2,18 @@ class Auto{
     public marca: string;
     public modelo: string;
     public tipo: string;   //naftero-gasolero
-    public color: string;
-    public anio: number;
-    public condicion:boolean;
+    public estaEncendidoApagado: boolean;
+    public velocidadActual:number;
+    
+    constructor (paramMarca:string, paramModelo:string, paramTipo:string, 
+        EstaEncendido:boolean, velocidadInicial:number){
 
-
-    constructor (paramMarca:string, paramModelo:string, paramTipo:string, paramColor:string, paramAnio:number, paramCondicion:boolean){
         this.marca = paramMarca;
         this.modelo = paramModelo;
         this.tipo = paramTipo;
-        this.color = paramColor;
-        this.anio = paramAnio;
-        this.condicion = paramCondicion;
+        this.estaEncendidoApagado = EstaEncendido;
+        this.velocidadActual = velocidadInicial;
+     
     }
 
     obtenerMarca():string{
@@ -25,26 +25,35 @@ class Auto{
     obtenerTipo():string{
         return this.tipo;
     }
-    obtenerColor():string{
-        return this.color;
+    encenderApagar():void{
+        if(this.estaEncendidoApagado===true){ //está encendido
+            this.estaEncendidoApagado=false;
+        }else {
+            this.estaEncendidoApagado=true;   //la palabra reservada "this" hace referencia a la variable "estaEncendido"
+        }
+       
     }
-    obtenerAnio():number{
-        return this.anio;
+    aumentarVelocidad():void {
+       this.velocidadActual = this.velocidadActual + 1;
     }
-    obtenerCondicion():boolean{
-       return this.condicion;
+    disminuirVelocidad():void {
+        this.velocidadActual = this.velocidadActual - 1;
     }
    
 }
 
-let primerAuto = new Auto ("audi","A3","naftero","rojo",2022,true);
-let segundoAuto = new Auto ("chevrolet","agile","naftero","blanco",2016,false);
-let tercerAuto = new Auto ("hyundai","veloster","naftero","azul",2022,true);
+let velocidadInicial:number = 0;
+
+let primerAuto = new Auto ("Audi","A3", "naftero",true,velocidadInicial );
+let segundoAuto = new Auto ("Chevrolet","Agile","naftero",true,velocidadInicial);
+let tercerAuto = new Auto ("Hyundai","Veloster","naftero",false,velocidadInicial);
 
 
 console.log ("--------------------------");
 console.log (".......AUTOMÓVILES........")
 console.log ("--------------------------");
 console.log("");
-console.log("La condición del primer auto disponible es:", primerAuto.obtenerCondicion());
-console.log("Tiene las siguientes caracteristicas: ",primerAuto);
+console.log("El modelo del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerMarca());
+console.log("El motor del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerTipo());
+console.log("Está encendido el ", primerAuto.obtenerMarca," ", primerAuto.encenderApagar());
+
