@@ -42,20 +42,20 @@ class Auto{
    
 }
 
-let velocidadInicial:number = 0;
 
-let primerAuto = new Auto ("Audi","A3", "naftero",true,velocidadInicial );
-let segundoAuto = new Auto ("Chevrolet","Agile","naftero",true,velocidadInicial);
-let tercerAuto = new Auto ("Hyundai","Veloster","naftero",false,velocidadInicial);
+
+let primerAuto = new Auto ("Audi","A3", "naftero",true,40 );
+let segundoAuto = new Auto ("Chevrolet","Agile","naftero",true,60);
+let tercerAuto = new Auto ("Hyundai","Veloster","naftero",false,20);
 
 
 console.log ("--------------------------");
 console.log (".......AUTOMÓVILES........")
 console.log ("--------------------------");
 console.log("");
-console.log("El modelo del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerMarca());
-console.log("El motor del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerTipo());
-console.log("Está encendido el ", primerAuto.obtenerMarca," ", primerAuto.encenderApagar());
+console.log("El modelo del ", primerAuto.obtenerMarca(),"es: ", primerAuto.obtenerMarca());
+console.log("El motor del ", primerAuto.obtenerMarca(),"es: ", primerAuto.obtenerTipo());
+//console.log("Está encendido el ", primerAuto.obtenerMarca()," ", primerAuto.encenderApagar());
 console.log("");
-console.log(primerAuto.obtenerMarca);
+console.log(primerAuto.obtenerMarca());
 
