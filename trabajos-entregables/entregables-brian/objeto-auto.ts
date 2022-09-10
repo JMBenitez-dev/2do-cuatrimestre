@@ -56,4 +56,6 @@ console.log("");
 console.log("El modelo del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerMarca());
 console.log("El motor del ", primerAuto.obtenerMarca,"es: ", primerAuto.obtenerTipo());
 console.log("Está encendido el ", primerAuto.obtenerMarca," ", primerAuto.encenderApagar());
+console.log("");
+console.log(primerAuto.obtenerMarca);
 

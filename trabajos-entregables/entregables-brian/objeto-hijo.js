@@ -30,4 +30,4 @@ console.log("la edad del primer niño es:", primerHijo.obtenerEdad);
 //let edadDelPrimerHijo:number = primerHijo.obtenerEdad;
 var segundoHijo = new Hijo(150, 45, 9, false);
 console.log("la altura del segundo niño es:", segundoHijo.obtenerAltura);
-//let alturaDelSegundoHIjo:number = segundoHijo.obtenerAltura;
+//let alturaDelSegundoHijo:number = segundoHijo.obtenerAltura;

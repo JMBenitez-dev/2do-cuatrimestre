@@ -35,13 +35,15 @@ class Hijo{
 }
 
 let primerHijo = new Hijo(120,30,5,true);
+//let edadDelPrimerHijo:number = primerHijo.obtenerEdad;
 console.log("la edad del primer niño es:", primerHijo.obtenerEdad);
 
-//let edadDelPrimerHijo:number = primerHijo.obtenerEdad;
+
 
 let segundoHijo= new Hijo(150,45,9,false);
+//let alturaDelSegundoHijo:number = segundoHijo.obtenerAltura;
 console.log("la altura del segundo niño es:", segundoHijo.obtenerAltura);
 
-//let alturaDelSegundoHIjo:number = segundoHijo.obtenerAltura;
+
 
 

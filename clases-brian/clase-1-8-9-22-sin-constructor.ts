@@ -1,4 +1,4 @@
-class Televisor{ //el objeto Televisor
+class Televisor1{ //el objeto Televisor
                 //con la palabra reservada "class" moldea el objeto
     
     public estaPrendido: Boolean; //se declaran con la palabra reservada "public"
@@ -8,8 +8,6 @@ class Televisor{ //el objeto Televisor
     public marca : string;
     public pulgada : number;
   
-    
-
     prenderApagar():void{
         if(this.estaPrendido===true){
             this.estaPrendido=false;
@@ -26,12 +24,10 @@ class Televisor{ //el objeto Televisor
     }
     setearPulgadas(paramPulgada:number):void{
         this.pulgada=paramPulgada;
-    }
+    } 
 
 }
 
-
-let primerTelevisor = new Televisor();
 primerTelevisor.setearPulgadas(43); //le doy una caracteristica sin crear un "constructor"
 primerTelevisor.obtenerVolumen();
 

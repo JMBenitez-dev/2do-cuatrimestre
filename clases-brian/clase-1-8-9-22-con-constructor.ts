@@ -1,22 +1,21 @@
-class Televisor { //el objeto Televisor
-    //con la palabra reservada "class" moldea el objeto
+class Televisor { //el objeto Televisor con la palabra reservada "class" moldea el objeto
 
-public estaPrendido: Boolean; //se declaran con la palabra reservada "public"
+//las vbles internas se declaran con la palabra reservada "public"
+public estaPrendido: boolean; 
 public volumenActual: number;
 public canalActual: number;
 public modelo : string;
 public marca : string;
-public pulgada : number;
+public pulgadas : number;
 
 
-    constructor (paramPrendido:boolean,paramVolumen:number, paramCanal:number, paramModelo:string,paramMarca:string, paramPulgada:number){ // éstos parametros pueden ser opcionales
-        this.estaPrendido = paramPrendido;
+    constructor (paramVolumen:number, paramPulgada:number){ // éstos parametros pueden ser opcionales
+                
         this.volumenActual = paramVolumen;
-        this.canalActual = paramCanal;
-        this.modelo = paramModelo;
-        this.marca = paramMarca;
-        this.pulgada = paramPulgada;
-
+        //this.canalActual = paramCanal;
+        //this.modelo = paramModelo;
+        //this.marca = paramMarca;
+        this.pulgadas = paramPulgada;
     }
     prenderApagar():void{
         if(this.estaPrendido===true){
@@ -25,7 +24,6 @@ public pulgada : number;
             this.estaPrendido=true;   //la palabra reservada "this" hace referencia a la variable "estaPrendido"
         }
     }
-
     obtenerVolumen():number{
         return this.volumenActual;
      }
@@ -33,17 +31,25 @@ public pulgada : number;
         this.volumenActual = this.volumenActual++;
     }
     setearPulgadas(paramPulgada:number):void{
-        this.pulgada=paramPulgada;
+        this.pulgadas=paramPulgada;
     }
-    
 }
 
-let primerTelevisor = new Televisor(true,45,67,"pepito,LG,45);    
+let primerTelevisor = new Televisor(50,60);    
 //a ésto se le llama instanciar (copiar) un objeto(Televisor)
 
-let segundoTelevisor = new Televisor(false,29,40,lalala,Sansung,60);
+let volumenDelPrimerTelevisor:number = primerTelevisor.obtenerVolumen();
+
+console.log("volumen "+volumenDelPrimerTelevisor);
+
+
+let segundoTelevisor = new Televisor(20,49);
  //tdv no podemos diferenciar los objetos, hasta ahora son todos iguales
         
+    
+    
+
+
 
 
 
