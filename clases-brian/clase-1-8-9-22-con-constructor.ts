@@ -1,12 +1,13 @@
 class Televisor { //el objeto Televisor con la palabra reservada "class" moldea el objeto
 
-//las vbles internas se declaran con la palabra reservada "public"
-public estaPrendido: boolean; 
-public volumenActual: number;
-public canalActual: number;
-public modelo : string;
-public marca : string;
-public pulgadas : number;
+ 
+//las vbles internas se declaran con la palabra reservada "private"
+private estaPrendido: boolean; 
+private volumenActual: number;
+private canalActual: number;
+private modelo : string;
+private marca : string;
+private pulgadas : number;
 
 
     constructor (paramVolumen:number, paramPulgada:number){ // éstos parametros pueden ser opcionales
@@ -36,7 +37,7 @@ public pulgadas : number;
 }
 
 let primerTelevisor = new Televisor(50,60);    
-//a ésto se le llama instanciar (copiar) un objeto(Televisor)
+//a ésto se le llama instanciar (crear) un objeto(Televisor) 
 
 let volumenDelPrimerTelevisor:number = primerTelevisor.obtenerVolumen();
 
@@ -44,7 +45,7 @@ console.log("volumen "+volumenDelPrimerTelevisor);
 
 
 let segundoTelevisor = new Televisor(20,49);
- //tdv no podemos diferenciar los objetos, hasta ahora son todos iguales
+ //tdv no podemos diferenciar los objetos, hasta ahora son todos iguales/mmmm
         
     
     
